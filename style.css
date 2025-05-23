@@ -1,9 +1,76 @@
-#watched img,
-#will-watch img {
-  height: 300px;
-  width: 300px;
-}
+/* The following CSS styles are meant to create a baseline for all the styles to follow. */
 
 html {
   scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+#watched img,
+#will-watch img {
+  height: 30em;
+  width: 20em;
+}
+
+/* Start with the header */
+
+header {
+  background-color: #264653;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 3em 1em 1.7em 1em;
+}
+
+header > img[alt*="Tech"] {
+  position: absolute;
+  height: 7em;
+  width: 7em;
+  left: 1.5em;
+  top: 2em;
+  color: #e76f51;
+  filter: invert(53%) sepia(82%) saturate(747%) hue-rotate(330deg);
+}
+
+header > h1 {
+  color: #f4a261;
+  font-size: 3rem;
+}
+
+header > h2 {
+  color: #dae9db;
+  font-weight: 100;
+}
+
+/* Nav bar styling: */
+
+nav {
+  background-color: #2a9d8f;
+  padding: 2em 0;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav > ul > li > a {
+  background-color: #e9c46a;
+  text-decoration: none;
+  padding: 0.5em 2.5em;
+  border-radius: 35px;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
