@@ -181,11 +181,13 @@ nav > ul > li > a:hover {
   gap: 1em;
   text-align: center;
   position: relative;
+  max-width: 28em;
 }
 
 .watched-card > h3 {
   font-size: 2rem;
   margin-bottom: 4em;
+  color: #264653;
 }
 
 /* Set the position of <p> and <button> to absolute to align them all properly */
@@ -242,3 +244,84 @@ nav > ul > li > a:hover {
 }
 
 /* Will Watch section styling: */
+
+#will-watch {
+  background-color: #b3ccc3;
+}
+
+#will-watch > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.5em 0.5em 1em 0.5em;
+}
+
+#will-watch-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  gap: 2em;
+  padding-bottom: 3em;
+}
+
+.will-watch-card {
+  background-color: #2a9d8f;
+  padding: 1.5em;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+  position: relative;
+  max-width: 28em;
+}
+
+.will-watch-card > h3 {
+  font-size: 2rem;
+  margin-bottom: 2.5em;
+  color: #fefae0;
+  font-weight: 600;
+}
+
+.will-watch-card > button {
+  background-color: #264653;
+  color: #fefae0;
+  padding: 0.8em 2em;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1em;
+}
+
+#will-watch-card-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#will-watch-card-2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+#will-watch-card-3 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+#will-watch-card-4 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#will-watch-card-5 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+#will-watch-card-6 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
