@@ -24,3 +24,6 @@ Code: Debugging the Gender Gap
 The Cleaners
 Do You Trust this Computer?
 Coded Bias
+
+UNFINISHED:
+1. Logo in the header

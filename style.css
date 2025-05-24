@@ -1,4 +1,4 @@
-/* The following CSS styles are meant to create a baseline for all the styles to follow. */
+/* Apply some baseline CSS for the entire page */
 
 html {
   scroll-behavior: smooth;
@@ -14,13 +14,23 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
 }
 
+/*Make all the images inside the cards consistent in their sizing */
+
 #watched img,
 #will-watch img {
   height: 30em;
-  width: 20em;
+  width: 25em;
+  border-radius: 25px;
 }
 
-/* Start with the header */
+/* Align the movie emoji properly with the text */
+
+.movie-icon {
+  position: relative;
+  bottom: 2.5px;
+}
+
+/* Header styling: */
 
 header {
   background-color: #264653;
@@ -33,15 +43,14 @@ header {
   padding: 3em 1em 1.7em 1em;
 }
 
-header > img[alt*="Tech"] {
+/* header > img[alt*="Tech"] {
   position: absolute;
   height: 7em;
   width: 7em;
   left: 1.5em;
   top: 2em;
-  color: #e76f51;
   filter: invert(53%) sepia(82%) saturate(747%) hue-rotate(330deg);
-}
+} */
 
 header > h1 {
   color: #f4a261;
@@ -88,7 +97,7 @@ nav > ul > li > a:hover {
   padding: 1.5em 2em 2em 0;
   display: grid;
   grid-template-columns: 3fr 7fr;
-  grid-template-rows: 0.7fr 3fr 1.5fr;
+  grid-template-rows: 0.7fr 2fr 1.5fr;
 }
 
 #about > #avatar-container {
@@ -104,6 +113,7 @@ nav > ul > li > a:hover {
   font-size: 2rem;
   font-style: italic;
   font-weight: 900;
+  text-decoration: underline;
 }
 
 #about > p {
@@ -139,3 +149,96 @@ nav > ul > li > a:hover {
 #about img {
   border-radius: 50%;
 }
+
+/* Watched List section styling: */
+
+#watched {
+  background-color: #efd79d;
+}
+
+#watched > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.5em 0.5em 1em 0.5em;
+}
+
+#watched-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  gap: 2em;
+  padding-bottom: 3em;
+}
+
+.watched-card {
+  background-color: #f4ab70;
+  padding: 1.5em;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+  position: relative;
+}
+
+.watched-card > h3 {
+  font-size: 2rem;
+  margin-bottom: 4em;
+}
+
+/* Set the position of <p> and <button> to absolute to align them all properly */
+
+.watched-card > p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: absolute;
+  bottom: 4.2em;
+}
+
+.watched-card > button {
+  background-color: #264653;
+  color: #f4a261;
+  padding: 0.8em 5em;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1em;
+}
+
+/* Even though all cards align properly, explicitly declared where they are supposed to exist */
+
+#watched-card-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#watched-card-2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+#watched-card-3 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+#watched-card-4 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#watched-card-5 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+#watched-card-6 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+/* Will Watch section styling: */
