@@ -14,12 +14,35 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
 }
 
+#bottom-right-button a {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  background-color: #202324;
+  text-decoration: none;
+  padding: 0.5em;
+  border-radius: 50%;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#bottom-right-button a:hover {
+  background-color: #e5904b;
+  color: #264653;
+  transition: all 0.1s ease-in-out;
+}
+
+#bottom-right-button a:active {
+  transform: scale(0.9);
+}
+
 /*Make all the images inside the cards consistent in their sizing */
 
 #watched img,
 #will-watch img {
-  height: 30em;
-  width: 25em;
+  height: 25em;
+  width: 20em;
   border-radius: 25px;
 }
 
@@ -181,22 +204,23 @@ nav > ul > li > a:hover {
   gap: 1em;
   text-align: center;
   position: relative;
-  max-width: 28em;
+  min-width: 25em;
+  max-width: 25em;
 }
 
 .watched-card > h3 {
-  font-size: 2rem;
-  margin-bottom: 4em;
+  font-size: 1.5rem;
+  margin-bottom: 5.5em;
   color: #264653;
 }
 
 /* Set the position of <p> and <button> to absolute to align them all properly */
 
 .watched-card > p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
   position: absolute;
-  bottom: 4.2em;
+  bottom: 4.8em;
 }
 
 .watched-card > button {
@@ -274,12 +298,13 @@ nav > ul > li > a:hover {
   gap: 1em;
   text-align: center;
   position: relative;
-  max-width: 28em;
+  min-width: 25em;
+  max-width: 25em;
 }
 
 .will-watch-card > h3 {
-  font-size: 2rem;
-  margin-bottom: 2.5em;
+  font-size: 1.5rem;
+  margin-bottom: 3em;
   color: #fefae0;
   font-weight: 600;
 }
@@ -339,7 +364,7 @@ footer {
 }
 
 footer p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 1em;
 }
 

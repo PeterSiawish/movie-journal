@@ -1,29 +1,2 @@
-Color Palette: 
-#264653
-#2a9d8f
-#e9c46a
-#f4a261
-#e76f51 
-Soft White	#f1faee	Background alternative (less stark than pure white)
-Light Gray	#e5e5e5	Neutral backgrounds or borders
-Deep Teal	#1d3557	Accent alternative to #264653
-Warm Sand	#fefae0	Soft section backgrounds, less contrast
-Off-Black	#2b2b2b 
-
-Movies/Docs:
-Robocop
-The Imitation Game
-The Great Hack
-The Social Dilemma 
-The Matrix
-Her 
-
-Ex Machina
-lo and behold reveries of the connected world
-Code: Debugging the Gender Gap
-The Cleaners
-Do You Trust this Computer?
-Coded Bias
-
 UNFINISHED:
 1. Logo in the header
