@@ -1,4 +1,68 @@
-/* Apply some baseline CSS for the entire page */
+/* Setup some CSS variables to enable the use of light and dark themes later on */
+
+:root {
+  --bg: #fefae0;
+  --text: #264653;
+  --header-bg: #264653;
+  --header-title: #f4a261;
+  --header-subtitle: #dae9db;
+  --nav-bg: #2a9d8f;
+  --nav-button: #e9c46a;
+  --nav-hover: #f4a261;
+  --about-box: #fff3a6;
+  --quote-bg: #f5cbab;
+  --quote-cite: #264653;
+  --watched-bg: #efd79d;
+  --watched-card-bg: #f4ab70;
+  --rating-color: #264653;
+  --button-bg: #264653;
+  --button-text: #f4a261;
+  --watch-bg: #b3ccc3;
+  --watch-card-bg: #2a9d8f;
+  --watch-card-title: #fefae0;
+  --footer-bg: #264653;
+  --footer-text: #e9c46a;
+  --footer-link-bg: #2b2b2b;
+  --footer-link-hover: #e5904b;
+  --scroll-bg: #202324;
+  --scroll-hover: #4e5a76;
+  --button-hover-bg: #e76f51;
+  --button-hover-text: #ffffff;
+}
+
+body.dark-theme {
+  --bg: #1a1a2e;
+  --text: #f5f6fa;
+  --header-bg: #0f3460;
+  --header-title: #faae2b;
+  --header-subtitle: #dcdde1;
+  --nav-bg: #16213e;
+  --nav-button: #1a73e8;
+  --nav-hover: #4ecca3;
+  --about-box: #2f3640;
+  --quote-bg: #353b48;
+  --quote-cite: #faae2b;
+  --watched-bg: #141e30;
+  --watched-card-bg: #273c75;
+  --rating-color: #faae2b;
+  --button-bg: #faae2b;
+  --button-text: #1a1a2e;
+  --watch-bg: #1e272e;
+  --watch-card-bg: #2f3640;
+  --watch-card-title: #faae2b;
+  --footer-bg: #0f3460;
+  --footer-text: #f5f6fa;
+  --footer-link-bg: #1a1a2e;
+  --footer-link-hover: #faae2b;
+  --scroll-bg: #1a73e8;
+  --scroll-hover: #4ecca3;
+  --button-hover-text: #faae2b;
+  --button-hover-bg: #1a1a2e;
+}
+
+#bottom-right-button.hidden {
+  display: none;
+}
 
 html {
   scroll-behavior: smooth;
@@ -12,29 +76,50 @@ html {
 
 body {
   font-family: "Montserrat", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
 }
+
+/* Bottom right button to scroll to the top of the page  */
 
 #bottom-right-button a {
   position: fixed;
   bottom: 1em;
   right: 1em;
-  background-color: #202324;
+  background-color: var(--scroll-bg);
   text-decoration: none;
-  padding: 0.5em;
+  padding: 0.5em 0.75em;
   border-radius: 50%;
   border: none;
   font-size: 2rem;
   cursor: pointer;
+  color: var(--text);
 }
 
 #bottom-right-button a:hover {
-  background-color: #e5904b;
-  color: #264653;
+  background-color: var(--scroll-hover);
+  color: var(--header-bg);
   transition: all 0.1s ease-in-out;
 }
 
 #bottom-right-button a:active {
   transform: scale(0.9);
+}
+
+/* Theme toggle button at the top left corner of the page  */
+
+#theme-toggle {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background-color: var(--nav-button);
+  color: var(--text);
+  border: none;
+  border-radius: 25px;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 /*Make all the images inside the cards consistent in their sizing */
@@ -56,8 +141,7 @@ body {
 /* Header styling: */
 
 header {
-  background-color: #264653;
-  /* position: relative; */
+  background-color: var(--header-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,29 +150,20 @@ header {
   padding: 3em 1em 1.7em 1em;
 }
 
-/* header > img[alt*="Tech"] {
-  position: absolute;
-  height: 7em;
-  width: 7em;
-  left: 1.5em;
-  top: 2em;
-  filter: invert(53%) sepia(82%) saturate(747%) hue-rotate(330deg);
-} */
-
 header > h1 {
-  color: #f4a261;
+  color: var(--header-title);
   font-size: 3rem;
 }
 
 header > h2 {
-  color: #dae9db;
+  color: var(--header-subtitle);
   font-weight: 100;
 }
 
 /* Nav bar styling: */
 
 nav {
-  background-color: #2a9d8f;
+  background-color: var(--nav-bg);
   padding: 2em 0;
 }
 
@@ -99,24 +174,25 @@ nav > ul {
 }
 
 nav > ul > li > a {
-  background-color: #e9c46a;
+  background-color: var(--nav-button);
   text-decoration: none;
   padding: 0.5em 2.5em;
   border-radius: 35px;
   font-size: 1.5rem;
   font-weight: 300;
+  color: var(--text);
 }
 
 nav > ul > li > a:hover {
-  background-color: #f4a261;
-  color: #264653;
+  background-color: var(--nav-hover);
+  color: var(--header-bg);
   transition: all 0.3s ease-in-out;
 }
 
 /* About section styling: */
 
 #about {
-  background-color: #fefae0;
+  background-color: var(--bg);
   padding: 1.5em 2em 2em 0;
   display: grid;
   grid-template-columns: 3fr 7fr;
@@ -142,7 +218,7 @@ nav > ul > li > a:hover {
 #about > p {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
-  background-color: #fff3a6;
+  background-color: var(--about-box);
   padding: 1.5em 1em 0 1em;
   font-weight: 500;
   border-radius: 20px;
@@ -153,7 +229,7 @@ nav > ul > li > a:hover {
 #about > blockquote {
   grid-row: 3 / 4;
   grid-column: 2 / 3;
-  background-color: #f5cbab;
+  background-color: var(--quote-bg);
   border-radius: 20px;
   font-weight: 700;
   padding: 1.5em 1em;
@@ -167,6 +243,7 @@ nav > ul > li > a:hover {
 #about > blockquote > cite {
   align-self: flex-end;
   margin-right: 3.5em;
+  color: var(--quote-cite);
 }
 
 #about img {
@@ -176,7 +253,7 @@ nav > ul > li > a:hover {
 /* Watched List section styling: */
 
 #watched {
-  background-color: #efd79d;
+  background-color: var(--watched-bg);
 }
 
 #watched > h2 {
@@ -195,7 +272,7 @@ nav > ul > li > a:hover {
 }
 
 .watched-card {
-  background-color: #f4ab70;
+  background-color: var(--watched-card-bg);
   padding: 1.5em;
   border-radius: 25px;
   display: flex;
@@ -211,21 +288,20 @@ nav > ul > li > a:hover {
 .watched-card > h3 {
   font-size: 1.5rem;
   margin-bottom: 5.5em;
-  color: #264653;
+  color: var(--text);
 }
-
-/* Set the position of <p> and <button> to absolute to align them all properly */
 
 .watched-card > p {
   font-size: 1.4rem;
   font-weight: 500;
   position: absolute;
   bottom: 4.8em;
+  color: var(--rating-color);
 }
 
 .watched-card > button {
-  background-color: #264653;
-  color: #f4a261;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   padding: 0.8em 5em;
   border-radius: 30px;
   border: none;
@@ -235,42 +311,10 @@ nav > ul > li > a:hover {
   bottom: 1em;
 }
 
-/* Even though all cards align properly, explicitly declared where they are supposed to exist */
-
-#watched-card-1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-#watched-card-2 {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-#watched-card-3 {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-}
-
-#watched-card-4 {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-
-#watched-card-5 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-#watched-card-6 {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-
 /* Will Watch section styling: */
 
 #will-watch {
-  background-color: #b3ccc3;
+  background-color: var(--watch-bg);
 }
 
 #will-watch > h2 {
@@ -289,7 +333,7 @@ nav > ul > li > a:hover {
 }
 
 .will-watch-card {
-  background-color: #2a9d8f;
+  background-color: var(--watch-card-bg);
   padding: 1.5em;
   border-radius: 25px;
   display: flex;
@@ -305,13 +349,13 @@ nav > ul > li > a:hover {
 .will-watch-card > h3 {
   font-size: 1.5rem;
   margin-bottom: 3em;
-  color: #fefae0;
+  color: var(--watch-card-title);
   font-weight: 600;
 }
 
 .will-watch-card > button {
-  background-color: #264653;
-  color: #fefae0;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   padding: 0.8em 2em;
   border-radius: 30px;
   border: none;
@@ -321,41 +365,21 @@ nav > ul > li > a:hover {
   bottom: 1em;
 }
 
-#will-watch-card-1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
+/* Hover effects for buttons in cards */
 
-#will-watch-card-2 {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-#will-watch-card-3 {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-}
-
-#will-watch-card-4 {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-
-#will-watch-card-5 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-#will-watch-card-6 {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
+.watched-card > button:hover,
+.will-watch-card > button:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
 }
 
 /* Footer styling: */
 
 footer {
-  background-color: #264653;
-  color: #e9c46a;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   padding: 2em 1em;
   display: flex;
   flex-direction: column;
@@ -373,18 +397,18 @@ footer > a[href*="top"] {
 }
 
 footer a {
-  color: #e9c46a;
+  color: var(--footer-text);
   text-decoration: none;
   font-weight: 700;
   font-size: 1rem;
-  background-color: #2b2b2b;
+  background-color: var(--footer-link-bg);
   padding: 0.5em 1em;
   border-radius: 30px;
 }
 
 footer a:hover {
-  background-color: #e5904b;
-  color: #264653;
+  background-color: var(--footer-link-hover);
+  color: var(--footer-bg);
   transition: all 0.3s ease-in-out;
 }
 

@@ -11,10 +11,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/61444936f3.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header id="top">
-      <!-- <img src="assets/chatbot.png" alt="Tech Logo" /> -->
+      <button id="theme-toggle">🌓 Toggle Theme</button>
       <h1>Tech Movie Journal</h1>
       <h2>A personal collection of tech-related films I've explored</h2>
     </header>
@@ -57,7 +62,10 @@
             <div class="watched-card-img-container">
               <img src="assets/robocop.jpg" alt="Robocop" />
             </div>
-            <h3>🎥 Robocop - 2014</h3>
+            <h3>
+              <span class="movie-icon">🎥</span>
+              Robocop - 2014
+            </h3>
             <p>Rating: ⭐⭐⭐⭐⭐</p>
             <button>Read Review</button>
           </div>
@@ -65,7 +73,10 @@
             <div class="watched-card-img-container">
               <img src="assets/imitation-game.jpg" alt="The Imitation Game" />
             </div>
-            <h3>🎥 The Imitation Game - 2014</h3>
+            <h3>
+              <span class="movie-icon">🎥</span>
+              The Imitation Game - 2014
+            </h3>
             <p>Rating: ⭐⭐⭐⭐⭐</p>
             <button>Read Review</button>
           </div>
@@ -81,7 +92,10 @@
             <div class="watched-card-img-container">
               <img src="assets/her.jpg" alt="Her" />
             </div>
-            <h3>🎥 Her - 2013</h3>
+            <h3>
+              <span class="movie-icon">🎥</span>
+              Her - 2013
+            </h3>
             <p>Rating: ⭐⭐⭐</p>
             <button>Read Review</button>
           </div>
@@ -97,7 +111,10 @@
             <div class="watched-card-img-container">
               <img src="assets/matrix.jpg" alt="The Matrix" />
             </div>
-            <h3>🎥 The Matrix - 1999</h3>
+            <h3>
+              <span class="movie-icon">🎥</span>
+              The Matrix - 1999
+            </h3>
             <p>Rating: ⭐⭐⭐⭐⭐</p>
             <button>Read Review</button>
           </div>
@@ -114,7 +131,10 @@
             <div class="will-watch-card-img-container">
               <img src="assets/ex-machina.jpg" alt="Ex Machina" />
             </div>
-            <h3>🎥 Ex Machina - 2014</h3>
+            <h3>
+              <span class="movie-icon">🎥</span>
+              Ex Machina - 2014
+            </h3>
             <button>Why This Movie?</button>
           </div>
           <div class="will-watch-card" id="will-watch-card-2">
@@ -174,6 +194,9 @@
         <a href="https://petersiawish.github.io/" target="_blank">My Website</a>
       </div>
     </footer>
-    <div id="bottom-right-button"><a href="#top">🔝</a></div>
+    <div id="bottom-right-button" class="hidden">
+      <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>
