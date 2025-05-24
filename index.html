@@ -67,7 +67,13 @@
               Robocop - 2014
             </h3>
             <p>Rating: ⭐⭐⭐⭐⭐</p>
-            <button>Read Review</button>
+            <button
+              class="read-review-btn"
+              data-review="Robocop was amazing! The story was captivating and the acting superb. I loved the way it explored the themes of technology and humanity. The action scenes were thrilling, and the cinematography was top-notch. I highly recommend it to anyone who enjoys a good sci-fi film!"
+              data-trailer="https://www.youtube.com/watch?v=7PAOsS3HM78"
+            >
+              Read Review
+            </button>
           </div>
           <div class="watched-card" id="watched-card-2">
             <div class="watched-card-img-container">
@@ -78,7 +84,13 @@
               The Imitation Game - 2014
             </h3>
             <p>Rating: ⭐⭐⭐⭐⭐</p>
-            <button>Read Review</button>
+            <button
+              class="read-review-btn"
+              data-review="The Imitation Game was amazing! The story was captivating and the acting superb. I loved the way it explored the themes of technology and humanity. The action scenes were thrilling, and the cinematography was top-notch. I highly recommend it to anyone who enjoys a good sci-fi film!"
+              data-trailer="https://www.youtube.com/watch?v=YmeEz6cQrwM"
+            >
+              Read Review
+            </button>
           </div>
           <div class="watched-card" id="watched-card-3">
             <div class="watched-card-img-container">
@@ -86,7 +98,13 @@
             </div>
             <h3>🎞️ The Great Hack - 2019</h3>
             <p>Rating: ⭐⭐⭐⭐</p>
-            <button>Read Review</button>
+            <button
+              class="read-review-btn"
+              data-review="The Great Hack was amazing! The story was captivating and the acting superb. I loved the way it explored the themes of technology and humanity. The action scenes were thrilling, and the cinematography was top-notch. I highly recommend it to anyone who enjoys a good sci-fi film!"
+              data-trailer="https://www.youtube.com/watch?v=iX8GxLP1FHo"
+            >
+              Read Review
+            </button>
           </div>
           <div class="watched-card" id="watched-card-4">
             <div class="watched-card-img-container">
@@ -97,7 +115,13 @@
               Her - 2013
             </h3>
             <p>Rating: ⭐⭐⭐</p>
-            <button>Read Review</button>
+            <button
+              class="read-review-btn"
+              data-review="Her was amazing! The story was captivating and the acting superb. I loved the way it explored the themes of technology and humanity. The action scenes were thrilling, and the cinematography was top-notch. I highly recommend it to anyone who enjoys a good sci-fi film!"
+              data-trailer="https://www.youtube.com/watch?v=dJTU48_yghs"
+            >
+              Read Review
+            </button>
           </div>
           <div class="watched-card" id="watched-card-5">
             <div class="watched-card-img-container">
@@ -105,7 +129,13 @@
             </div>
             <h3>🎞️ The Social Dilemma - 2020</h3>
             <p>Rating: ⭐⭐</p>
-            <button>Read Review</button>
+            <button
+              class="read-review-btn"
+              data-review="The Social Dilemma was amazing! The story was captivating and the acting superb. I loved the way it explored the themes of technology and humanity. The action scenes were thrilling, and the cinematography was top-notch. I highly recommend it to anyone who enjoys a good sci-fi film!"
+              data-trailer="https://www.youtube.com/watch?v=uaaC57tcci0"
+            >
+              Read Review
+            </button>
           </div>
           <div class="watched-card" id="watched-card-6">
             <div class="watched-card-img-container">
@@ -116,7 +146,23 @@
               The Matrix - 1999
             </h3>
             <p>Rating: ⭐⭐⭐⭐⭐</p>
-            <button>Read Review</button>
+            <button
+              class="read-review-btn"
+              data-review="The Matrix was amazing! The story was captivating and the acting superb. I loved the way it explored the themes of technology and humanity. The action scenes were thrilling, and the cinematography was top-notch. I highly recommend it to anyone who enjoys a good sci-fi film!"
+              data-trailer="https://www.youtube.com/watch?v=vKQi3bBA1y8"
+            >
+              Read Review
+            </button>
+          </div>
+          <!-- The following modal will appear when the read review buttons are clicked. -->
+          <div id="review-modal" class="modal">
+            <div class="modal-content">
+              <span id="modal-close">&times;</span>
+              <p id="modal-review-text"></p>
+              <a id="modal-trailer-link" href="#" target="_blank">
+                ▶ Watch Trailer
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -135,7 +181,13 @@
               <span class="movie-icon">🎥</span>
               Ex Machina - 2014
             </h3>
-            <button>Why This Movie?</button>
+            <button
+              class="read-review-btn"
+              data-review="I want to watch this movie because it explores the fascinating themes of artificial intelligence and the ethical implications of creating sentient beings. The story promises to be thought-provoking and visually stunning, making it a must-watch for any tech enthusiast."
+              data-trailer="https://www.youtube.com/watch?v=sDkEF7Db7Gw"
+            >
+              Why This Movie?
+            </button>
           </div>
           <div class="will-watch-card" id="will-watch-card-2">
             <div class="will-watch-card-img-container">
@@ -145,7 +197,13 @@
               />
             </div>
             <h3>🎞️ Lo and Behold, Reveries of the Connected World - 2016</h3>
-            <button>Why This Documentary?</button>
+            <button
+              class="read-review-btn"
+              data-review="I want to watch this documentary because it delves into the profound impact of the internet on our lives, exploring both its wonders and its dangers. Werner Herzog's unique storytelling style promises to make this a captivating exploration of our digital age."
+              data-trailer="https://www.youtube.com/watch?v=Zc1tZ8JsZvg&pp=0gcJCdgAo7VqN5tD"
+            >
+              Why This Documentary?
+            </button>
           </div>
           <div class="will-watch-card" id="will-watch-card-3">
             <div class="will-watch-card-img-container">
@@ -155,14 +213,26 @@
               />
             </div>
             <h3>🎞️ Code: Debugging the Gender Gap - 2015</h3>
-            <button>Why This Documentary?</button>
+            <button
+              class="read-review-btn"
+              data-review="I want to watch this documentary because it delves into the profound impact of the internet on our lives, exploring both its wonders and its dangers. Werner Herzog's unique storytelling style promises to make this a captivating exploration of our digital age."
+              data-trailer="https://www.youtube.com/watch?v=8VVb6M8pTvE"
+            >
+              Why This Documentary?
+            </button>
           </div>
           <div class="will-watch-card" id="will-watch-card-4">
             <div class="will-watch-card-img-container">
               <img src="assets/the-cleaners.jpg" alt="The Cleaners" />
             </div>
             <h3>🎞️ The Cleaners - 2018</h3>
-            <button>Why This Documentary?</button>
+            <button
+              class="read-review-btn"
+              data-review="I want to watch this documentary because it delves into the profound impact of the internet on our lives, exploring both its wonders and its dangers. Werner Herzog's unique storytelling style promises to make this a captivating exploration of our digital age."
+              data-trailer="https://www.youtube.com/watch?v=iGCGhD8i-o4"
+            >
+              Why This Documentary?
+            </button>
           </div>
           <div class="will-watch-card" id="will-watch-card-5">
             <div class="will-watch-card-img-container">
@@ -172,14 +242,35 @@
               />
             </div>
             <h3>🎞️ Do You Trust This Computer? - 2018</h3>
-            <button>Why This Documentary?</button>
+            <button
+              class="read-review-btn"
+              data-review="I want to watch this documentary because it delves into the profound impact of the internet on our lives, exploring both its wonders and its dangers. Werner Herzog's unique storytelling style promises to make this a captivating exploration of our digital age."
+              data-trailer="https://www.youtube.com/watch?v=3CJE6XheubM&pp=ygUaZG8geW91IHRydXN0IHRoaXMgY29tcHV0ZXI%3D"
+            >
+              Why This Documentary?
+            </button>
           </div>
           <div class="will-watch-card" id="will-watch-card-6">
             <div class="will-watch-card-img-container">
               <img src="assets/coded-bias.jpg" alt="Coded Bias" />
             </div>
             <h3>🎞️ Coded Bias - 2020</h3>
-            <button>Why This Documentary?</button>
+            <button
+              class="read-review-btn"
+              data-review="I want to watch this documentary because it delves into the profound impact of the internet on our lives, exploring both its wonders and its dangers. Werner Herzog's unique storytelling style promises to make this a captivating exploration of our digital age."
+              data-trailer="https://www.youtube.com/watch?v=jZl55PsfZJQ"
+            >
+              Why This Documentary?
+            </button>
+          </div>
+          <div id="review-modal" class="modal">
+            <div class="modal-content">
+              <span id="modal-close">&times;</span>
+              <p id="modal-review-text"></p>
+              <a id="modal-trailer-link" href="#" target="_blank">
+                ▶ Watch Trailer
+              </a>
+            </div>
           </div>
         </div>
       </section>

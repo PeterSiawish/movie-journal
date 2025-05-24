@@ -422,3 +422,49 @@ footer #link-container #home-page-logo {
   font-size: 2em;
   margin-bottom: 0.5em;
 }
+
+#review-modal {
+  display: none;
+}
+
+#review-modal #modal-close {
+  cursor: pointer;
+  float: right;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-radius: 100%;
+  padding: 0.5em 0.7em;
+}
+
+#review-modal #modal-trailer-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--button-bg);
+  text-decoration: none;
+}
+
+#review-modal #modal-trailer-link:hover {
+  text-decoration: underline;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: var(--bg);
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+  color: var(--text);
+}
