@@ -468,3 +468,71 @@ footer #link-container #home-page-logo {
   box-shadow: 0 0 10px #000;
   color: var(--text);
 }
+
+/* Responsive styles for mobile devices */
+@media (max-width: 700px) {
+  header {
+    padding: 2em 0.5em 1em 0.5em;
+  }
+
+  nav > ul {
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+
+  nav > ul > li > a {
+    font-size: 1.1rem;
+    padding: 0.5em 1.5em;
+  }
+
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    padding: 1em 0.5em;
+  }
+
+  #about > #avatar-container {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    margin-bottom: 1em;
+  }
+  #about > h2,
+  #about > p,
+  #about > blockquote {
+    grid-column: 1 / 2;
+  }
+
+  #watched-card-grid,
+  #will-watch-card-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 1.2em;
+    padding-bottom: 1.5em;
+  }
+
+  .watched-card,
+  .will-watch-card {
+    min-width: 90vw;
+    max-width: 95vw;
+    padding: 1em;
+  }
+
+  #watched img,
+  #will-watch img {
+    width: 90vw;
+    height: auto;
+    max-width: 320px;
+    max-height: 400px;
+  }
+
+  footer {
+    padding: 1em 0.5em;
+    font-size: 1rem;
+  }
+
+  footer #link-container {
+    position: static;
+    margin-bottom: 1em;
+  }
+}
